@@ -14,9 +14,9 @@ import { UserService } from './user.service';
 })
 
 export class UserCreateComponent { 
-  @Input() user: User;
-  @Input() address: Address;
-  @Input() projects: Project;
+  user: User = {};
+  address: Address = {};
+  projects: Project = [];
   constructor(private userService: UserService, private router: Router){ }
   createUser(user, address, projects): void {
     if (Object.keys(address).length !== 0) {
